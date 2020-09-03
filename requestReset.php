@@ -28,7 +28,7 @@
             $mail->SMTPAuth   = true;
             $mail->Username   = 'nasa.nase72@gmail.com';
             $mail->Password   = 'Jasamnikola1';
-            $mail->SMTPSecure = 'tls';
+            $mail->SMTPSecure = 'ssl';
             $mail->Port       = 587;
 
             //Recipients
