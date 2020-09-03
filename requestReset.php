@@ -32,7 +32,7 @@
             $mail->Port       = 465;
 
             //Recipients
-            $mail->setFrom('pavlovicnikola511@gmail.com', 'Paki');
+            $mail->setFrom('nasa.nase72@gmail.com', 'Paki');
             $mail->addAddress($emailTo);
             $mail->addReplyTo('no-reply@gmail.com', 'No reply');
 
@@ -48,7 +48,7 @@
             echo 'Reset password link has been sent to your email';
         } 
         catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            echo "Message could not be sent. Mail Error: {$mail->ErrorInfo}";
         }
         exit();
     }
