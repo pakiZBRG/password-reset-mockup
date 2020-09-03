@@ -29,7 +29,7 @@
             $mail->Username   = 'nasa.nase72@gmail.com';
             $mail->Password   = 'Jasamnikola1';
             $mail->SMTPSecure = 'ssl';
-            $mail->Port       = 587;
+            $mail->Port       = 465;
 
             //Recipients
             $mail->setFrom('pavlovicnikola511@gmail.com', 'Paki');
