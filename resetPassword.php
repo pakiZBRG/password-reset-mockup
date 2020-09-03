@@ -21,11 +21,10 @@
             echo "Passwords do not match.";
             exit();
         }
-        else if($pwd < 9){
+        else if($pwd > 9){
             echo "Minimum length is 8";
             exit();
         }
-        
 
         $hashPwd = password_hash($pwd, PASSWORD_DEFAULT);
         $row = mysqli_fetch_array($run);
@@ -34,9 +33,9 @@
         $query = mysqli_query($conn, "UPDATE users SET password='$hashPwd' WHERE email='$email';");
         
         if($query){
-            $sql = mysqli_query($conn, "DELETE FROM reset WHERE email='$email'");
-            echo $sql;
-            exit("Password updated");
+            $query = mysqli_query($conn, "SELECT * FROM users WHERE email='$email'");
+            $row = mysqli_fetch_array($query);
+            exit("Password updated, ".$row['username']);
         }
         else {
             exit('Something went wrong');
