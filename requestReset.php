@@ -29,8 +29,8 @@
             $mail->SMTPAuth   = true;
             $mail->Username   = 'nasa.nase72@gmail.com';
             $mail->Password   = 'Jasamnikola1';
-            $mail->SMTPSecure = 'ssl';
-            $mail->Port       = 465;
+            $mail->SMTPSecure = 'tls';
+            $mail->Port       = 587;
 
             //Recipients
             $mail->setFrom('nasa.nase72@gmail.com', 'Paki');
